@@ -21,8 +21,12 @@ public class InstantiateTest : MonoBehaviour
         // cloneObject.transform.parent = this.transform; // GameManagerを親に指定
         // cloneObject.transform.position = new Vector3( -1.0f, 1.0f, 0.0f); // 座標を変更
 
+
         // GameObject cloneObject = Instantiate (childrenObject, Vector3.zero, Quaternion.identity);
+        //親オブジェクトを指定することで、親子関係になる方法です。
+        //子オブジェクトのtransform.parentに親にしたいオブジェクトのtransformを代入します。
         // cloneObject.transform.parent = gameObject.transform;
+
         Instantiate(childrenObject, Vector3.zero, Quaternion.identity, gameObject.transform);
         //第四引数を活用して親オブジェクトを指定することも可能
 
